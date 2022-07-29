@@ -1,4 +1,16 @@
 @import './sass/variable';
 .container{
+  background-color:$main-color;
+}
+
+nav.nav{
+  padding:0.75rem 0.50rem;
   background-color:$second-color;
+  margin-bottom: 0.75rem;
+    .brand{
+      color:$white;
+      font-weight: 600;
+      line-height: 1.75rem;
+      font-size:1.50rem;
+    }
 }

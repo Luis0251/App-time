@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { WeatherService } from './pages/weather/services/weather.service';
+import { WeatherData } from './shared/interface/interface.weather';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'App-time';
+  public weather$!: Observable<WeatherData>;
+  constructor(private readonly weatherSvc: WeatherService){}
+  public onSearch(city:string):void{
+    this.weather$ = this.weatherSvc.getWeatherByName(city);
+
+  }
 }
