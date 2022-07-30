@@ -8,6 +8,7 @@ import { WeatherData } from 'src/app/shared/interface/interface.weather';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WeatherComponent implements OnInit {
+  public BASE_URL = 'http://openweathermap.org/img/wn';
   @Input() public weather!:WeatherData
   constructor() { }
 
