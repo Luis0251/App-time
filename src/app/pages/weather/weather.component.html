@@ -8,5 +8,30 @@
   <div class="card__city">
     {{weather.name}} , {{weather.sys.country}} / {{weather.main.temp | number:'1.0-0'}}
   </div>
-
+<div class="card__stats">
+  <div class="card__stat width-33">
+    <div class="card__stat--stat">
+      {{weather.main.pressure}}
+    </div>
+    <div class="card__stat--name">
+      Pressure
+    </div>
+  </div>
+  <div class="card__stat width-33">
+    <div class="card__stat--stat">
+      {{weather.main.humidity}}
+    </div>
+    <div class="card__stat--name">
+      Humidity
+    </div>
+  </div>
+  <div class="card__stat width-33 no-border">
+    <div class="card__stat--stat">
+      {{weather.wind.speed}}
+    </div>
+    <div class="card__stat--name ">
+      Speed
+    </div>
+  </div>
+</div>
 </div>

@@ -14,17 +14,12 @@ export class WeatherService{
   public getWeatherByName(city:string): Observable<WeatherData>{
     const params = new HttpParams()
     .set('q',city)
-    .set('units','metric')
-    .set('appid',environment.openWeather.key)
     return this.http.get<WeatherData>(`${this.API_URL}/weather`,{params});
   }
   public getWeatherByCoords(coord:Coord):Observable<WeatherData>{
     const params = new HttpParams()
     .set('lat',coord.lat)
     .set('lon',coord.lon)
-    .set('unit','metric')
-    .set('appid',environment.openWeather.key)
-
    return this.http.get<WeatherData>(`${this.API_URL}/weather`,{params});
   }
   }
