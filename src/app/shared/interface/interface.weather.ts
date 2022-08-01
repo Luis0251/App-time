@@ -40,8 +40,10 @@
       name: string;
   }
   export interface Coord {
-      lon: number;
-      lat: number;
+    longitude: number;
+    latitude: number;
   }
 
 
+ // latitude: 10.4327001
+ // longitude: -75.5393042
