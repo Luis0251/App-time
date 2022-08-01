@@ -12,7 +12,9 @@ import { GeoLocationS } from './shared/services/geo-location.service';
 export class AppComponent {
   public weather$!: Observable<WeatherData>;
   constructor(private readonly weatherSvc: WeatherService, private readonly GeoLocationSvc: GeoLocationS){
-    this.getLocation();
+    if(navigator?.geolocation){
+      this.getLocation();
+    }
   }
 
   public onSearch(city:string):void{
